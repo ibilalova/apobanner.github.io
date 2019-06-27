@@ -1,0 +1,27 @@
+{
+  "name": "apobanner-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config ./config/webpack.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apomaya/banner.git"
+  },
+  "author": "apomaya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apomaya/banner/issues"
+  },
+  "homepage": "https://github.com/apomaya/banner#readme",
+  "dependencies": {
+    "adblock-detection-banner": "git+ssh://git@github.com/apomaya/banner.git#10e1d6132a6c96057ae65f18fea5ae93b50b158d",
+    "webpack": "^4.28.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.1.2"
+  }
+}
