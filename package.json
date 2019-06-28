@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/apomaya/banner#readme",
   "dependencies": {
-    "adblock-detection-banner": "git+ssh://git@github.com/apomaya/banner.git#10e1d6132a6c96057ae65f18fea5ae93b50b158d",
+    "adblock-detection-banner": "git+ssh://git@github.com/apomaya/banner.git#6c46414709312c5722f0c3de03c122e6954510d8",
     "webpack": "^4.28.0"
   },
   "devDependencies": {

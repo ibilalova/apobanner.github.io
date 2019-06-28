@@ -1,1 +1,127 @@
-inner
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link type="text/css" href="../css/main.css" rel="Stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap" rel="stylesheet">
+    <script src="../index.js"></script>
+</head>
+<body>
+    <script>
+        function createBanner(b) {
+            let config = {
+                type: 'innerBlock',
+                content: {
+                    text: document.getElementById('text').value || undefined,
+                    containerStyle: document.getElementById('containerStyle').value || undefined,
+                    contentStyle: document.getElementById('contentStyle').value || undefined,
+                    background: document.getElementById('background').value || undefined,
+                    dest: 'test_field',
+                },
+                closeButton: {
+                    show: document.getElementById('cbshow').checked,
+                    style: document.getElementById('cbstyle').value || undefined,
+                    color: document.getElementById('cbcolor').value || undefined,
+                    size: document.getElementById('cbsize').value  || undefined,
+                }, 
+            }
+            var Banner = new window.banner(config);            
+            Banner.showIfAdblockerDetected();
+        }
+    </script>
+    <header>
+        <nav class="tab">
+            <a class="nav_link logo" href="https://www.apomaya.com/">
+                <img src="../assets/logo.png"/>
+            </a>
+            <a class="nav_link" href="banner.html">Banner</a>
+            <a class="nav_link" href="modal.html">Modal</a>
+            <a class="nav_link active inner" href="inner.html">InnerBlock</a>
+        </nav>
+    </header>
+    <main class="tab_content_wrapper inner">
+        <section class="card card_big">
+            <div class="card_title">Configuration</div>
+            <form class="main_form" id="create_form">
+                <div class="form_fields">
+                    <div class="form_field">
+                        <div class="form_field__part form_field__lable">type</div>
+                        <div class="form_field__part form_field__input">
+                            <label>innerBlock</label>
+                        </div>
+                    </div>
+                    <!-- <div class="form_field">
+                        <div class="form_field__part form_field__lable">id</div>
+                        <div class="form_field__part form_field__input">
+                            <input type="text" value="apobanner">
+                        </div>
+                    </div> -->
+                    <div class="form_title">content</div>
+                    <div class="form_field">
+                        <div class="form_field__part form_field__lable">text</div>
+                        <div class="form_field__part form_field__input">
+                            <input id="text" type="text" value="">
+                        </div>
+                    </div>
+                    <div class="form_field">
+                        <div class="form_field__part form_field__lable">containerStyle</div>
+                        <div class="form_field__part form_field__input">
+                            <input id="containerStyle" type="text" value="">
+                        </div>
+                    </div>
+                    <div class="form_field">
+                        <div class="form_field__part form_field__lable">contentStyle</div>
+                        <div class="form_field__part form_field__input">
+                            <input id="contentStyle" type="text" value="">
+                        </div>
+                    </div>
+                    <div class="form_field">
+                        <div class="form_field__part form_field__lable">background</div>
+                        <div class="form_field__part form_field__input">
+                            <input id="background" type="text" value="">
+                        </div>
+                    </div>
+                    <div class="form_field">
+                        <div class="form_field__part form_field__lable">dest</div>
+                        <div class="form_field__part form_field__input">
+                            <label>test_field</label>
+                        </div>
+                    </div>
+                    <div class="form_title">closeButton</div>
+                    <div class="form_field">
+                        <div class="form_field__part form_field__lable">show</div>
+                        <div class="form_field__part form_field__input">
+                            <input id="cbshow" type="checkbox" checked>
+                        </div>
+                    </div>
+                    <div class="form_field">
+                        <div class="form_field__part form_field__lable">style</div>
+                        <div class="form_field__part form_field__input">
+                            <input id="cbstyle" type="text" value="">
+                        </div>
+                    </div>
+                    <div class="form_field">
+                        <div class="form_field__part form_field__lable">size</div>
+                        <div class="form_field__part form_field__input">
+                            <input id="cbsize" type="text" value="">
+                        </div>
+                    </div>
+                    <div class="form_field">
+                        <div class="form_field__part form_field__lable">color</div>
+                        <div class="form_field__part form_field__input">
+                            <input id="cbcolor" type="text" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="form_btn" onclick="createBanner(this)">
+                    Create Coverage
+                </div>
+            </form>
+        </section>
+        <section class="test_field" id="test_field">
+            <div>block with id `test_field`</div>
+        </section>
+    </main>
+</body>
+</html>
