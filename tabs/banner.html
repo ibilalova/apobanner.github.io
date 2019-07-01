@@ -26,6 +26,7 @@
                     size: document.getElementById('cbsize').value  || undefined,
                 }, 
             }
+            debugger
             var Banner = new window.banner(config);            
             Banner.showIfAdblockerDetected();
         }
@@ -46,78 +47,108 @@
             <form class="main_form" id="create_form">
                 <div class="form_fields">
                     <div class="form_field">
-                        <div class="form_field__part form_field__lable">type</div>
+                        <div class="form_field__part form_field__label">type</div>
                         <div class="form_field__part form_field__input">
                             <label>banner</label>
                         </div>
                     </div>
                     <div class="form_field">
-                        <div class="form_field__part form_field__lable">position</div>
+                        <div class="form_field__part form_field__label">
+                            position
+                            <span class="question">&#63;<span class="tooltip">Position on the page</span></span>
+                        </div>
                         <div class="form_field__part form_field__input">
-                            <input id="position" type="text" value="bottom">
+                            <select id="position">
+                                <option value="bottom" selected>bottom</option>
+                                <option value="top">top</option>
+                            </select>
                         </div>
                     </div>
                     <!-- <div class="form_field">
-                        <div class="form_field__part form_field__lable">id</div>
+                        <div class="form_field__part form_field__label">id</div>
                         <div class="form_field__part form_field__input">
                             <input type="text" value="apobanner">
                         </div>
                     </div> -->
                     <div class="form_title">content</div>
                     <div class="form_field">
-                        <div class="form_field__part form_field__lable">text</div>
+                        <div class="form_field__part form_field__label text__label">
+                            text
+                            <span class="question">&#63;<span class="tooltip">Banner content<br/>(text or html)</span></span>
+                        </div>
                         <div class="form_field__part form_field__input">
-                            <input id="text" type="text" value="">
+                            <textarea id="text" type="text" value="" rows="2"></textarea>
                         </div>
                     </div>
                     <div class="form_field">
-                        <div class="form_field__part form_field__lable">containerStyle</div>
+                        <div class="form_field__part form_field__label containerStyle__label">
+                            containerStyle
+                            <span class="question">&#63;<span class="tooltip">Banner wrapper style<br/>(background-image: url(); border-color: red;)</span></span>
+                        </div>
                         <div class="form_field__part form_field__input">
-                            <input id="containerStyle" type="text" value="">
+                            <textarea id="containerStyle" type="text" value="" rows="2"></textarea>
                         </div>
                     </div>
                     <div class="form_field">
-                        <div class="form_field__part form_field__lable">contentStyle</div>
+                        <div class="form_field__part form_field__label contentStyle__label">
+                            contentStyle
+                            <span class="question">&#63;<span class="tooltip">Banner content style<br/>(color: red; font-size: 14px;)</span></span>
+                        </div>
                         <div class="form_field__part form_field__input">
-                            <input id="contentStyle" type="text" value="">
+                            <textarea id="contentStyle" type="text" value="" rows="2"></textarea>
                         </div>
                     </div>
                     <div class="form_field">
-                        <div class="form_field__part form_field__lable">background</div>
+                        <div class="form_field__part form_field__label">
+                            background
+                            <span class="question">&#63;<span class="tooltip">Banner background <br/>(#eee)</span></span>
+                        </div>
                         <div class="form_field__part form_field__input">
                             <input id="background" type="text" value="">
                         </div>
                     </div>
                     <div class="form_title">closeButton</div>
                     <div class="form_field">
-                        <div class="form_field__part form_field__lable">show</div>
+                        <div class="form_field__part form_field__label cbShow__label">
+                            show
+                            <span class="question">&#63;<span class="tooltip">Should add<br/>close option</span></span>
+                        </div>
                         <div class="form_field__part form_field__input">
                             <input id="cbshow" type="checkbox" checked>
                         </div>
                     </div>
                     <div class="form_field">
-                        <div class="form_field__part form_field__lable">style</div>
+                        <div class="form_field__part form_field__label cbStyle__label">
+                            style
+                            <span class="question">&#63;<span class="tooltip">Close button style<br/>(border-color: #fff;)</span></span>
+                        </div>
                         <div class="form_field__part form_field__input">
-                            <input id="cbstyle" type="text" value="">
+                            <textarea id="cbstyle" type="text" value="" rows="2"></textarea>
                         </div>
                     </div>
                     <div class="form_field">
-                        <div class="form_field__part form_field__lable">size</div>
+                        <div class="form_field__part form_field__label cbSize__label">
+                            size
+                            <span class="question">&#63;<span class="tooltip">Closing cross size<br/>(14px)</span></span>
+                        </div>
                         <div class="form_field__part form_field__input">
                             <input id="cbsize" type="text" value="">
                         </div>
                     </div>
                     <div class="form_field">
-                        <div class="form_field__part form_field__lable">color</div>
+                        <div class="form_field__part form_field__label cbColor__label">
+                            color
+                            <span class="question">&#63;<span class="tooltip">Closing cross color<br/>(#444c)</span></span>
+                        </div>
                         <div class="form_field__part form_field__input">
                             <input id="cbcolor" type="text" value="">
                         </div>
                     </div>
                 </div>
-                <div class="form_btn" onclick="createBanner(this)">
-                    Create Banner
-                </div>
             </form>
+            <div class="form_btn" onclick="createBanner(this)">
+                Create Banner
+            </div>
         </section>
     </main>
 </body>
