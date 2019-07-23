@@ -10,4 +10,4 @@ var banner = new window.banner({
         width: '',
     },
 });
-banner.showIfAdblockerDetected();
+banner.show();
