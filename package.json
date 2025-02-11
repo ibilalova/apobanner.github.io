@@ -19,7 +19,7 @@
   "homepage": "https://github.com/apomaya/banner#readme",
   "dependencies": {
     "adblock-detection-banner": "git+ssh://git@github.com/apomaya/banner.git#6c46414709312c5722f0c3de03c122e6954510d8",
-    "webpack": "^4.28.0"
+    "webpack": "^5.97.1"
   },
   "devDependencies": {
     "webpack-cli": "^3.1.2"
